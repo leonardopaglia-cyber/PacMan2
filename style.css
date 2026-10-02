@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: #050509;
+color: white;
+font-family: 'Orbitron', Arial, sans-serif;
+overflow-x: hidden;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.header {
+height: 80px;
+width: 100%;
+padding: 0 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+background: rgba(5, 5, 9, 0.95);
+border-bottom: 1px solid #17172c;
+
+position: sticky;
+top: 0;
+z-index: 100;
+
+
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+
+font-size: 22px;
+font-weight: 900;
+letter-spacing: 2px;
+
+
+}
+
+.logo span span {
+color: #ffe600;
+}
+
+.logo-pacman {
+color: #ffe600;
+font-size: 36px;
+}
+
+nav {
+display: flex;
+gap: 35px;
+}
+
+nav a {
+color: #aaa;
+text-decoration: none;
+font-size: 12px;
+transition: 0.3s;
+}
+
+nav a:hover {
+color: #ffe600;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+min-height: 650px;
+padding: 90px 8%;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+background:
+    radial-gradient(circle at 80% 50%, #17143b 0%, transparent 35%),
+    radial-gradient(circle at 20% 20%, #151526 0%, transparent 30%);
+
+
+}
+
+.hero-text {
+max-width: 600px;
+}
+
+.tag {
+color: #00e5ff;
+font-size: 12px;
+letter-spacing: 3px;
+margin-bottom: 20px;
+}
+
+.hero h1 {
+font-size: clamp(50px, 7vw, 90px);
+line-height: 0.95;
+letter-spacing: -3px;
+}
+
+.hero h1 span {
+color: #ffe600;
+}
+
+.hero h1 strong {
+color: #ff305c;
+}
+
+.description {
+max-width: 500px;
+margin: 30px 0;
+color: #a7a7b4;
+line-height: 1.8;
+font-family: Arial, sans-serif;
+}
+
+.play-button {
+display: inline-block;
+
+padding: 17px 28px;
+
+background: #ffe600;
+color: #050509;
+
+text-decoration: none;
+font-weight: 900;
+font-size: 13px;
+
+border-radius: 5px;
+
+box-shadow: 0 0 25px rgba(255, 230, 0, 0.25);
+
+transition: 0.3s;
+
+
+}
+
+.play-button:hover {
+transform: translateY(-4px);
+box-shadow: 0 0 35px rgba(255, 230, 0, 0.5);
+}
+
+/* =========================
+MINI MAZE
+========================= */
+
+.hero-game {
+width: 400px;
+height: 400px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.mini-maze {
+width: 330px;
+height: 330px;
+
+position: relative;
+
+border: 5px solid #263cff;
+
+background:
+    radial-gradient(circle, #11112c 2px, transparent 2px);
+
+background-size: 20px 20px;
+
+box-shadow:
+    0 0 20px #263cff,
+    inset 0 0 40px #10104a;
+
+
+}
+
+.mini-pacman {
+position: absolute;
+left: 50px;
+top: 130px;
+
+font-size: 50px;
+color: #ffe600;
+
+filter: drop-shadow(0 0 10px #ffe600);
+
+animation: movePac 2s infinite alternate;
+
+
+}
+
+@keyframes movePac {
+from {
+left: 45px;
+}
+
+to {
+    left: 220px;
+}
+
+
+}
+
+.mini-ghost {
+position: absolute;
+font-size: 35px;
+animation: ghostMove 2s infinite alternate;
+}
+
+.mini-ghost.red {
+top: 50px;
+right: 45px;
+}
+
+.mini-ghost.pink {
+bottom: 50px;
+right: 70px;
+}
+
+@keyframes ghostMove {
+from {
+transform: translateY(0);
+}
+
+to {
+    transform: translateY(35px);
+}
+
+
+}
+
+.mini-dot {
+position: absolute;
+width: 7px;
+height: 7px;
+
+background: white;
+border-radius: 50%;
+
+box-shadow: 0 0 8px white;
+
+
+}
+
+.dot1 {
+left: 25px;
+top: 25px;
+}
+
+.dot2 {
+left: 140px;
+top: 25px;
+}
+
+.dot3 {
+right: 25px;
+top: 25px;
+}
+
+.dot4 {
+left: 140px;
+bottom: 25px;
+}
+
+.dot5 {
+right: 25px;
+bottom: 25px;
+}
+
+/* =========================
+SOBRE
+========================= */
+
+.about {
+padding: 100px 8%;
+background: #080811;
+}
+
+.section-title p {
+color: #ff305c;
+font-size: 11px;
+letter-spacing: 4px;
+margin-bottom: 15px;
+}
+
+.section-title h2 {
+font-size: 40px;
+line-height: 1.1;
+}
+
+.section-title h2 span {
+color: #ffe600;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+margin-top: 50px;
+}
+
+.card {
+padding: 35px;
+
+background: #0e0e1b;
+border: 1px solid #20203a;
+
+transition: 0.3s;
+
+
+}
+
+.card:hover {
+transform: translateY(-8px);
+border-color: #ffe600;
+box-shadow: 0 10px 40px rgba(255, 230, 0, 0.08);
+}
+
+.card-icon {
+font-size: 40px;
+margin-bottom: 20px;
+}
+
+.card h3 {
+font-size: 18px;
+margin-bottom: 15px;
+}
+
+.card p {
+color: #888895;
+line-height: 1.7;
+font-family: Arial, sans-serif;
+}
+
+/* =========================
+GAME
+========================= */
+
+.game-section {
+padding: 100px 20px;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+background:
+    radial-gradient(circle at center, #10103b 0%, #050509 50%);
+
+
+}
+
+.game-heading {
+text-align: center;
+margin-bottom: 35px;
+}
+
+.game-heading p {
+color: #00e5ff;
+font-size: 11px;
+letter-spacing: 4px;
+margin-bottom: 12px;
+}
+
+.game-heading h2 {
+font-size: 40px;
+}
+
+.game-heading h2 span {
+color: #ffe600;
+}
+
+/* =========================
+SCORE
+========================= */
+
+.score-panel {
+width: 560px;
+max-width: 95vw;
+
+display: flex;
+justify-content: space-around;
+
+margin-bottom: 15px;
+
+background: #0c0c18;
+border: 1px solid #24244b;
+
+padding: 15px;
+
+
+}
+
+.score-panel div {
+text-align: center;
+}
+
+.score-panel small {
+display: block;
+color: #666677;
+font-size: 9px;
+margin-bottom: 5px;
+}
+
+.score-panel strong {
+color: #ffe600;
+font-size: 17px;
+}
+
+/* =========================
+CANVAS
+========================= */
+
+.game-container {
+width: 560px;
+max-width: 95vw;
+
+position: relative;
+
+border: 4px solid #263cff;
+
+box-shadow:
+    0 0 20px rgba(38, 60, 255, 0.4),
+    0 0 80px rgba(38, 60, 255, 0.1);
+
+background: black;
+
+
+}
+
+canvas {
+display: block;
+width: 100%;
+height: auto;
+background: black;
+}
+
+/* =========================
+GAME MESSAGE
+========================= */
+
+.game-message {
+position: absolute;
+
+inset: 0;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+
+background: rgba(0, 0, 0, 0.82);
+
+padding: 20px;
+
+
+}
+
+.game-message h2 {
+font-size: 45px;
+color: #ffe600;
+
+text-shadow:
+    0 0 10px #ffe600,
+    0 0 30px #ffe600;
+
+margin-bottom: 20px;
+
+
+}
+
+.game-message p {
+color: #aaa;
+font-family: Arial, sans-serif;
+margin-bottom: 25px;
+}
+
+.game-message button {
+border: none;
+
+background: #ffe600;
+color: black;
+
+padding: 15px 30px;
+
+font-family: inherit;
+font-weight: bold;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+
+}
+
+.game-message button:hover {
+transform: scale(1.08);
+box-shadow: 0 0 25px #ffe600;
+}
+
+/* =========================
+CONTROLS
+========================= */
+
+.controls {
+width: 560px;
+max-width: 95vw;
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+
+gap: 10px;
+
+margin-top: 20px;
+
+
+}
+
+.control-info {
+display: flex;
+align-items: center;
+gap: 10px;
+
+padding: 12px;
+
+background: #0c0c18;
+border: 1px solid #1d1d35;
+
+
+}
+
+.control-info span {
+font-size: 22px;
+}
+
+.control-info p {
+color: #777;
+font-size: 8px;
+line-height: 1.5;
+}
+
+.control-info strong {
+color: white;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+padding: 50px 8%;
+
+background: #030305;
+
+border-top: 1px solid #16162a;
+
+text-align: center;
+
+
+}
+
+.footer-logo {
+color: #ffe600;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+footer p {
+color: #666;
+font-family: Arial, sans-serif;
+font-size: 13px;
+}
+
+footer .copyright {
+margin-top: 15px;
+color: #333;
+}
+
+/* =========================
+RESPONSIVO
+========================= */
+
+@media (max-width: 850px) {
+
+.hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+}
+
+.hero-game {
+    width: 300px;
+    height: 300px;
+}
+
+.mini-maze {
+    width: 270px;
+    height: 270px;
+}
+
+.cards {
+    grid-template-columns: 1fr;
+}
+
+.section-title {
+    text-align: center;
+}
+
+nav {
+    display: none;
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+.header {
+    padding: 0 20px;
+}
+
+.hero {
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+}
+
+.about {
+    padding: 70px 20px;
+}
+
+.game-section {
+    padding: 70px 10px;
+}
+
+.game-heading h2 {
+    font-size: 28px;
+}
+
+.score-panel {
+    padding: 10px 5px;
+}
+
+.controls {
+    grid-template-columns: 1fr;
+}
+
+
+  }
