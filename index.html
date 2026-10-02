@@ -1,0 +1,403 @@
+<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pac-Man | Retro Arcade</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head> 
+  <body>
+<!-- CABEÇALHO -->
+<header class="header">
+    <div class="logo">
+        <span class="logo-pacman">◕</span>
+        <span>PAC<span>MAN</span></span>
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#jogo">Jogar</a>
+    </nav>
+</header>
+
+<!-- HERO / DIVULGAÇÃO -->
+<main>
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-text">
+            <p class="tag">🕹️ RETRO ARCADE EXPERIENCE</p>
+
+            <h1>
+                COME,<br>
+                <span>FUJA</span>,<br>
+                <strong>VENÇA!</strong>
+            </h1>
+
+            <p class="description">
+                Entre no labirinto, devore todos os pontos,
+                escape dos fantasmas e tente alcançar a maior
+                pontuação!
+            </p>
+
+            <a href="#jogo" class="play-button">
+                ▶ JOGAR AGORA
+            </a>
+        </div>
+
+        <div class="hero-game">
+            <div class="mini-maze">
+
+                <div class="mini-pacman">◕</div>
+
+                <div class="mini-ghost red">👻</div>
+                <div class="mini-ghost pink">👻</div>
+
+                <div class="mini-dot dot1"></div>
+                <div class="mini-dot dot2"></div>
+                <div class="mini-dot dot3"></div>
+                <div class="mini-dot dot4"></div>
+                <div class="mini-dot dot5"></div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="about">
+
+        <div class="section-title">
+            <p>ARCADE CLASSIC</p>
+            <h2>VOCÊ CONSEGUE<br><span>SOBREVIVER?</span></h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🟡</div>
+                <h3>COLETE</h3>
+                <p>
+                    Coma todos os pontos espalhados pelo
+                    labirinto para aumentar sua pontuação.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">👻</div>
+                <h3>ESCAPE</h3>
+                <p>
+                    Os fantasmas estão atrás de você.
+                    Não deixe que eles acabem com suas vidas!
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>POWER UP</h3>
+                <p>
+                    Pegue as frutas especiais e ganhe
+                    poderes para enfrentar os fantasmas.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- JOGO -->
+    <section id="jogo" class="game-section">
+
+        <div class="game-heading">
+            <p>🎮 READY PLAYER ONE?</p>
+            <h2>PAC-MAN <span>ARCADE</span></h2>
+        </div>
+
+        <div class="score-panel">
+
+            <div>
+                <small>PONTUAÇÃO</small>
+                <strong id="score">0</strong>
+            </div>
+
+            <div>
+                <small>RECORDE</small>
+                <strong id="highScore">0</strong>
+            </div>
+
+            <div>
+                <small>VIDAS</small>
+                <strong id="lives">❤️❤️❤️</strong>
+            </div>
+
+        </div>
+
+        <div class="game-container">
+
+            <canvas id="gameCanvas" width="560" height="560"></canvas>
+
+            <div id="gameMessage" class="game-message">
+
+                <h2>PAC-MAN</h2>
+
+                <p>
+                    Use as setas ou WASD para se movimentar.
+                </p>
+
+                <button id="startButton">
+                    ▶ COMEÇAR
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="controls">
+
+            <div class="control-info">
+                <span>⌨️</span>
+                <p>
+                    <strong>CONTROLES</strong><br>
+                    Setas ou WASD
+                </p>
+            </div>
+
+            <div class="control-info">
+                <span>🟡</span>
+                <p>
+                    <strong>OBJETIVO</strong><br>
+                    Colete todos os pontos
+                </p>
+            </div>
+
+            <div class="control-info">
+                <span>👻</span>
+                <p>
+                    <strong>CUIDADO</strong><br>
+                    Evite os fantasmas
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+
+    <div class="footer-logo">
+        🟡 PAC-MAN ARCADE
+    </div>
+
+    <p>
+        Projeto desenvolvido em HTML, CSS e JavaScript.
+    </p>
+
+    <p class="copyright">
+        © 2026 Retro Arcade
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body> </html>
+<!-- CABEÇALHO -->
+<header class="header">
+    <div class="logo">
+        <span class="logo-pacman">◕</span>
+        <span>PAC<span>MAN</span></span>
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#jogo">Jogar</a>
+    </nav>
+</header>
+
+<!-- HERO / DIVULGAÇÃO -->
+<main>
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-text">
+            <p class="tag">🕹️ RETRO ARCADE EXPERIENCE</p>
+
+            <h1>
+                COME,<br>
+                <span>FUJA</span>,<br>
+                <strong>VENÇA!</strong>
+            </h1>
+
+            <p class="description">
+                Entre no labirinto, devore todos os pontos,
+                escape dos fantasmas e tente alcançar a maior
+                pontuação!
+            </p>
+
+            <a href="#jogo" class="play-button">
+                ▶ JOGAR AGORA
+            </a>
+        </div>
+
+        <div class="hero-game">
+            <div class="mini-maze">
+
+                <div class="mini-pacman">◕</div>
+
+                <div class="mini-ghost red">👻</div>
+                <div class="mini-ghost pink">👻</div>
+
+                <div class="mini-dot dot1"></div>
+                <div class="mini-dot dot2"></div>
+                <div class="mini-dot dot3"></div>
+                <div class="mini-dot dot4"></div>
+                <div class="mini-dot dot5"></div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="about">
+
+        <div class="section-title">
+            <p>ARCADE CLASSIC</p>
+            <h2>VOCÊ CONSEGUE<br><span>SOBREVIVER?</span></h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🟡</div>
+                <h3>COLETE</h3>
+                <p>
+                    Coma todos os pontos espalhados pelo
+                    labirinto para aumentar sua pontuação.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">👻</div>
+                <h3>ESCAPE</h3>
+                <p>
+                    Os fantasmas estão atrás de você.
+                    Não deixe que eles acabem com suas vidas!
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>POWER UP</h3>
+                <p>
+                    Pegue as frutas especiais e ganhe
+                    poderes para enfrentar os fantasmas.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- JOGO -->
+    <section id="jogo" class="game-section">
+
+        <div class="game-heading">
+            <p>🎮 READY PLAYER ONE?</p>
+            <h2>PAC-MAN <span>ARCADE</span></h2>
+        </div>
+
+        <div class="score-panel">
+
+            <div>
+                <small>PONTUAÇÃO</small>
+                <strong id="score">0</strong>
+            </div>
+
+            <div>
+                <small>RECORDE</small>
+                <strong id="highScore">0</strong>
+            </div>
+
+            <div>
+                <small>VIDAS</small>
+                <strong id="lives">❤️❤️❤️</strong>
+            </div>
+
+        </div>
+
+        <div class="game-container">
+
+            <canvas id="gameCanvas" width="560" height="560"></canvas>
+
+            <div id="gameMessage" class="game-message">
+
+                <h2>PAC-MAN</h2>
+
+                <p>
+                    Use as setas ou WASD para se movimentar.
+                </p>
+
+                <button id="startButton">
+                    ▶ COMEÇAR
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="controls">
+
+            <div class="control-info">
+                <span>⌨️</span>
+                <p>
+                    <strong>CONTROLES</strong><br>
+                    Setas ou WASD
+                </p>
+            </div>
+
+            <div class="control-info">
+                <span>🟡</span>
+                <p>
+                    <strong>OBJETIVO</strong><br>
+                    Colete todos os pontos
+                </p>
+            </div>
+
+            <div class="control-info">
+                <span>👻</span>
+                <p>
+                    <strong>CUIDADO</strong><br>
+                    Evite os fantasmas
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+
+    <div class="footer-logo">
+        🟡 PAC-MAN ARCADE
+    </div>
+
+    <p>
+        Projeto desenvolvido em HTML, CSS e JavaScript.
+    </p>
+
+    <p class="copyright">
+        © 2026 Retro Arcade
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+</body> 
+</html>
